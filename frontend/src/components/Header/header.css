@@ -1,0 +1,105 @@
+:root {
+   --primary-color     : #ff7e01;
+   --secondary-color   : #faa935;
+   --heading-color     : #0b2727;
+   --text-color        : #6e7074;
+   --font-name         : "Montserrat", sans-serif;
+   --subtitle-font-name: "Island Moments", cursive;
+}
+
+.header {
+   width      : 100%;
+   height     : 80px;
+   line-height: 80px;
+}
+
+.logo img {
+   width: 30%;
+}
+
+.menu {
+   margin-bottom: 0;
+}
+
+.nav__item a {
+   text-decoration: none;
+   color          : var(--heading-color);
+   font-weight    : 500;
+   font-size      : 1.5rem;
+}
+
+.nav__item a:hover {
+   color: inherit;
+}
+
+.nav__item a.active__link {
+   color: var(--secondary-color);
+}
+
+.mobile__menu {
+   font-size: 1.3rem;
+   color    : var(--heading-color);
+   display  : none;
+}
+
+.sticky__header {
+   width      : 100%;
+   height     : 80px;
+   line-height: 80px;
+   background : #fff;
+   position   : sticky;
+   top        : 0;
+   left       : 0;
+   box-shadow : 3px 3px 8px -3px #ddd;
+   z-index    : 999;
+}
+
+/* =============== RESPONSIVE ================ */
+@media only screen and (max-width:992px) {
+   .logo img {
+      width: 20%;
+   }
+
+   .navigation {
+      width     : 100%;
+      height    : 100%;
+      position  : fixed;
+      top       : 0;
+      left      : 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index   : 999;
+      display   : none;
+   }
+
+   .menu {
+      position       : absolute;
+      top            : 0;
+      right          : 0;
+      width          : calc(100% - 75%);
+      height         : 100%;
+      background     : #fff;
+      flex-direction : column;
+      line-height    : 0.5rem;
+      justify-content: center;
+      z-index        : 9999;
+   }
+
+   .show__menu {
+      display: block;
+   }
+
+   .mobile__menu {
+      display: block;
+   }
+}
+
+/* =============== RESPONSIVE ================ */
+@media only screen and (max-width: 768px) {
+   .logo img {
+      width: 45%;
+   }
+
+   .menu {
+      width: calc(100% - 50%);
+   }
+}
